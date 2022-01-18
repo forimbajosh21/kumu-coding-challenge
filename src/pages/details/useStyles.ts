@@ -15,7 +15,7 @@ const styles = ({ palette, spacing }: Theme) =>
       height: '100%',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
-      backgroundSize: 'center',
+      backgroundSize: 'cover',
       top: 0,
       bottom: 0,
       left: 0,
