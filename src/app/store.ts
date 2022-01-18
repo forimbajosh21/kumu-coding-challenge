@@ -1,17 +1,22 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+/* eslint-disable import/no-cycle */
+
+import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
+import SreamsReducer from './Streams'
+
+import UiReducer from './Ui'
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    streams: SreamsReducer,
+    ui: UiReducer,
   },
-});
+})
 
-export type AppDispatch = typeof store.dispatch;
-export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch
+export type RootState = ReturnType<typeof store.getState>
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
   RootState,
   unknown,
   Action<string>
->;
+>

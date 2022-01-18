@@ -1,0 +1,30 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": "airbnb-typescript-prettier",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "project": "./tsconfig.eslint.json"
+  },
+  "ignorePatterns": [
+    "**/*.d.ts",
+    "**/*.config.js",
+    "**/*.js"
+  ],
+  "env": {
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    "react/function-component-definition": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["off"]
+  }
+}
